@@ -2,20 +2,19 @@
     <div id="app" class="relative flex h-screen">
       <!-- Navigation Menu -->
       <nav class="absolute top-0 right-0 p-4">
-        <ul class="flex space-x-4">
-          <li>
-            <a href="#" class="font-mono text-lg text-white hover:bg-gray-700 p-2 rounded transition">Home</a>
-          </li>
-          <li>
-            <a href="#" class="font-mono text-lg text-white hover:bg-gray-700 p-2 rounded transition">Experience</a>
-          </li>
-          <li>
-            <a href="#" class="font-mono text-lg text-white hover:bg-gray-700 p-2 rounded transition">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="flex space-x-4">
+        <li>
+          <router-link to="/" class="font-mono text-lg text-white hover:bg-gray-700 p-2 rounded transition">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/experience" class="font-mono text-lg text-white hover:bg-gray-700 p-2 rounded transition">Experience</router-link>
+        </li>
+        <li>
+          <router-link to="/contact" class="font-mono text-lg text-white hover:bg-gray-700 p-2 rounded transition">Contact</router-link>
+        </li>
+      </ul>
+    </nav>
   
-      <!-- Content Area -->
       <div class="basis-1/3 bg-black">
         <h6 class="text-2xl text-white mt-5 ml-10 font-serif font-bold">Aizat N.</h6>
       </div>
@@ -47,14 +46,12 @@
     margin: 0;
   }
   
-  /* Add transition property for smooth color change */
   nav a {
     transition: background-color 0.3s ease;
   }
   
-  /* Add styles for hover effect */
   nav a:hover {
-    background-color: #4a5568; /* Change to your desired color */
+    background-color: #4a5568; 
   }
   </style>
   
