@@ -6,7 +6,7 @@ export default defineEventHandler(() => {
       id: 1,
       title: 'Name',
       content: {
-        en: 'Engish.'
+        en: 'Engish.',
       },
       image: '/images/.png',
     },

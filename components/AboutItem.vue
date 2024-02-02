@@ -1,6 +1,6 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue';
+import { Icon } from '@iconify/vue'
 
 const props = defineProps({
   about: Object,
@@ -15,10 +15,9 @@ const { locale } = useI18n({ useScope: 'global' })
 
 <template>
   <li class="about-item">
-
     <div class="about-content-box">
       <p class="about-item-text">
-        {{  about.description?.en }}
+        {{ about.description?.en }}
       </p>
     </div>
   </li>

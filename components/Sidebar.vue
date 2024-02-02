@@ -10,16 +10,18 @@ function toggleMenu() {
   <aside class="sidebar" :class="{ active: isOpen }">
     <div class="sidebar-info">
       <figure class="avatar-box">
-        <img src="/images/avatar.jpg" alt="Photo" width="80">
+        <img src="/images/avatar.jpg" alt="Photo" width="80" />
       </figure>
 
       <div class="info-content">
-        <h1 class="name" title="Aizat Nazran">
-          Aizat Nazran
-        </h1>
+        <h1 class="name" title="Aizat Nazran">Aizat Nazran</h1>
 
-        <p class="title text-center xl:block flex items-center justify-center gap-1">
-          <span class="xl:after:content-[''] after:content-['']">Full-Stack Developer</span>
+        <p
+          class="title text-center xl:block flex items-center justify-center gap-1"
+        >
+          <span class="xl:after:content-[''] after:content-['']"
+            >Full-Stack Developer</span
+          >
         </p>
       </div>
 
@@ -34,19 +36,20 @@ function toggleMenu() {
       <div class="separator" />
 
       <ul class="contacts-list">
-        
-
         <li class="contact-item">
           <div class="icon-box">
             <ion-icon name="logo-github" />
           </div>
 
           <div class="contact-info">
-            <p class="contact-title">
-              Github
-            </p>
+            <p class="contact-title">Github</p>
 
-            <a href="https://github.com/aizatnazran" class="contact-link" target="_blank">aizatnazran</a>
+            <a
+              href="https://github.com/aizatnazran"
+              class="contact-link"
+              target="_blank"
+              >aizatnazran</a
+            >
           </div>
         </li>
 
@@ -56,11 +59,14 @@ function toggleMenu() {
           </div>
 
           <div class="contact-info">
-            <p class="contact-title">
-              Linkedin
-            </p>
+            <p class="contact-title">Linkedin</p>
 
-            <a href="https://www.linkedin.com/in/aizat-nazran/" class="contact-link" target="_blank">Aizat Nazran</a>
+            <a
+              href="https://www.linkedin.com/in/aizat-nazran/"
+              class="contact-link"
+              target="_blank"
+              >Aizat Nazran</a
+            >
           </div>
         </li>
         <li class="contact-item">
@@ -69,13 +75,15 @@ function toggleMenu() {
           </div>
 
           <div class="contact-info">
-            <p class="contact-title">
-              Email
-            </p>
+            <p class="contact-title">Email</p>
 
-            <NuxtLink to="mailto:aizatnazran@gmail.com" class="social-link" target="_blank">
-      <a class="email-link">aizatnazran@gmail .com</a>
-    </NuxtLink>
+            <NuxtLink
+              to="mailto:aizatnazran@gmail.com"
+              class="social-link"
+              target="_blank"
+            >
+              <a class="email-link">aizatnazran@gmail .com</a>
+            </NuxtLink>
           </div>
         </li>
         <li class="contact-item">
@@ -84,9 +92,7 @@ function toggleMenu() {
           </div>
 
           <div class="contact-info">
-            <p class="contact-title">
-              Location
-            </p>
+            <p class="contact-title">Location</p>
 
             <address>Cheras, Kuala Lumpur</address>
           </div>
@@ -101,4 +107,5 @@ function toggleMenu() {
 <style>
 .email-link {
   color: var(--white-2);
-}</style>
+}
+</style>

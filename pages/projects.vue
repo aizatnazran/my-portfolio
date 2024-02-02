@@ -2,10 +2,10 @@
 import { useI18n } from 'vue-i18n'
 import Flicking from '@egjs/vue3-flicking'
 import '@egjs/vue3-flicking/dist/flicking.css'
-import { Icon } from '@iconify/vue';
+import { Icon } from '@iconify/vue'
 
 useHead({
-  title: 'Portfolio',
+  title: 'Projects',
 })
 
 const { locale } = useI18n({ useScope: 'global' })
@@ -20,7 +20,9 @@ const activeCategoryName = ref('')
 function changeFilter(id) {
   activeCategory.value = id
   if (id !== 0)
-    activeCategoryName.value = categories.value.find(item => item.id === id).title
+    activeCategoryName.value = categories.value.find(
+      (item) => item.id === id,
+    ).title
 
   filterMenu.value = !filterMenu.value
 }
@@ -30,7 +32,7 @@ const activeModal = ref(false)
 const activeOverlay = ref(false)
 
 function showItem(id) {
-  activeItem.value = projects.value.find(item => item.id === id)
+  activeItem.value = projects.value.find((item) => item.id === id)
   activeModal.value = true
   activeOverlay.value = true
 }
@@ -46,29 +48,43 @@ function closeItem() {
   <article class="portfolio active" data-page="portfolio">
     <header>
       <h2 class="h2 article-title">
-        {{ $t('pageTitles.portfolio') }}
+        {{ $t('Projects') }}
       </h2>
     </header>
 
     <section class="projects">
       <ul class="filter-list">
         <li class="filter-item">
-          <button :class="{ active: activeCategory === 0 }" @click="changeFilter(0)">
+          <button
+            :class="{ active: activeCategory === 0 }"
+            @click="changeFilter(0)"
+          >
             All
           </button>
         </li>
 
-        <li v-for="category in categories" :key="category.id" class="filter-item" @click="changeFilter(category.id)">
+        <li
+          v-for="category in categories"
+          :key="category.id"
+          class="filter-item"
+          @click="changeFilter(category.id)"
+        >
           <button :class="{ active: activeCategory === category.id }">
-            {{  category.title?.en  }}
+            {{ category.title?.en }}
           </button>
         </li>
       </ul>
 
       <div class="filter-select-box">
-        <button :class="{ active: filterMenu }" class="filter-select" @click="filterMenu = !filterMenu">
+        <button
+          :class="{ active: filterMenu }"
+          class="filter-select"
+          @click="filterMenu = !filterMenu"
+        >
           <div class="select-value">
-            {{ activeCategory !== 0 ? ( activeCategoryName?.en ) : 'Select Category' }}
+            {{
+              activeCategory !== 0 ? activeCategoryName?.en : 'Select Category'
+            }}
           </div>
 
           <div class="select-icon">
@@ -78,41 +94,53 @@ function closeItem() {
 
         <ul class="select-list">
           <li class="select-item">
-            <button @click="changeFilter(0)">
-              All
-            </button>
+            <button @click="changeFilter(0)">All</button>
           </li>
 
-          <li v-for="category in categories" :key="category.id" class="select-item">
+          <li
+            v-for="category in categories"
+            :key="category.id"
+            class="select-item"
+          >
             <button @click="changeFilter(category.id)">
-              {{  category.title?.en  }}
+              {{ category.title?.en }}
             </button>
           </li>
         </ul>
       </div>
 
       <ul class="project-list">
-        <li v-for="project in projectList" :key="project.id" :class="{ active: activeCategory === project.category.id || activeCategory === 0 }" class="project-item">
+        <li
+          v-for="project in projectList"
+          :key="project.id"
+          :class="{
+            active:
+              activeCategory === project.category.id || activeCategory === 0,
+          }"
+          class="project-item"
+        >
           <a class="cursor-pointer" @click="showItem(project.id)">
-
             <figure class="project-img">
               <div class="project-item-icon-box">
                 <ion-icon name="eye-outline" />
               </div>
 
-              <img :src="project.image" :alt="project.title" loading="lazy">
+              <img :src="project.image" :alt="project.title" loading="lazy" />
             </figure>
 
             <h3 class="project-title">{{ project.title }}</h3>
 
-            <p class="project-category">{{ project.category.title?.en  }}</p>
-
+            <p class="project-category">{{ project.category.title?.en }}</p>
           </a>
         </li>
       </ul>
 
       <div class="modal-container" :class="{ active: activeModal }">
-        <div v-show="activeModal" class="overlay" :class="{ active: activeOverlay }" />
+        <div
+          v-show="activeModal"
+          class="overlay"
+          :class="{ active: activeOverlay }"
+        />
 
         <section class="testimonials-modal block">
           <button class="modal-close-btn" @click="closeItem">
@@ -121,7 +149,11 @@ function closeItem() {
 
           <div>
             <figure>
-              <img :src="activeItem.image" class="rounded-lg" :alt="activeItem.title">
+              <img
+                :src="activeItem.image"
+                class="rounded-lg"
+                :alt="activeItem.title"
+              />
             </figure>
           </div>
 
@@ -131,10 +163,23 @@ function closeItem() {
             </h4>
 
             <small class="flex items-center justify-start gap-2 text-gray-500">
-              <Icon icon="foundation:calendar" /><span>{{  activeItem.category?.date?.en  }}</span> | <Icon icon="dashicons:category" /><span>{{ activeItem.category?.title?.en }}</span> | <Icon icon="ri:search-eye-line" /><a :href="activeItem.url" target="_blank">{{  activeItem.desc?.en }}</a>
+              <Icon icon="foundation:calendar" /><span>{{
+                activeItem.category?.date?.en
+              }}</span>
+              | <Icon icon="dashicons:category" /><span>{{
+                activeItem.category?.title?.en
+              }}</span>
+              |  <Icon icon="dashicons:building" /><span>{{
+                activeItem.category?.company?.en
+              }}</span>
+              | <Icon icon="ri:search-eye-line" /><a
+                :href="activeItem.url"
+                target="_blank"
+                >{{ activeItem.desc?.en }}</a
+              >
             </small>
 
-            <p class="text-justify" v-html=" activeItem.content?.en " />
+            <p class="text-justify" v-html="activeItem.content?.en" />
           </div>
         </section>
       </div>

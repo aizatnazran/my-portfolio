@@ -5,19 +5,37 @@ export default defineEventHandler(() => {
     {
       id: 1,
       title: {
-        en: 'Song'
+        en: 'Front-End Development',
       },
     },
     {
       id: 2,
       title: {
-        en: 'App'
+        en: 'Back-End Development',
       },
     },
     {
       id: 3,
       title: {
-        en: 'Web Design'
+        en: 'Database and SQL',
+      },
+    },
+    {
+      id: 4,
+      title: {
+        en: 'Messaging Services',
+      },
+    },
+    {
+      id: 5,
+      title: {
+        en: 'DevOps',
+      },
+    },
+    {
+      id: 6,
+      title: {
+        en: 'Server Configuration',
       },
     },
   ]

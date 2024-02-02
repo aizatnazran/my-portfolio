@@ -9,7 +9,7 @@ export const useCookieStore = defineStore('cookieStore', () => {
 
   function setCookie() {
     $cookies.set('accept-cookie', true, '30d')
-    return this.cookie = true
+    return (this.cookie = true)
   }
   const getCookie = computed(() => {
     return cookie.value

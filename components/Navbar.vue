@@ -1,6 +1,4 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
   <nav class="navbar">
@@ -12,14 +10,14 @@
       </li>
 
       <li class="navbar-item">
-        <NuxtLink to="/resume" class="navbar-link">
-          {{ $t('pageTitles.resume') }}
+        <NuxtLink to="/experience" class="navbar-link">
+          {{ $t('Experience') }}
         </NuxtLink>
       </li>
 
       <li class="navbar-item">
-        <NuxtLink to="/portfolio" class="navbar-link">
-          {{ $t('pageTitles.portfolio') }}
+        <NuxtLink to="/projects" class="navbar-link">
+          {{ $t('Projects') }}
         </NuxtLink>
       </li>
 

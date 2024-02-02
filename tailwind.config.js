@@ -32,9 +32,7 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-dark-mode'),
-  ],
+  plugins: [require('tailwindcss-dark-mode')],
   darkMode: 'class',
   variants: {
     backgroundColor: [

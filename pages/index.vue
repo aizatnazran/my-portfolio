@@ -1,9 +1,8 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
-import { Icon } from '@iconify/vue';
+import { Icon } from '@iconify/vue'
 
-useHead({
-})
+useHead({})
 
 onMounted(() => {
   useLocaleStore()
@@ -19,7 +18,7 @@ const activeModal = ref(false)
 const activeOverlay = ref(false)
 
 function showTestimonial(id) {
-  testimonialItem.value = testimonials.value.find(item => item.id === id)
+  testimonialItem.value = testimonials.value.find((item) => item.id === id)
   activeModal.value = true
   activeOverlay.value = true
 }
@@ -53,17 +52,28 @@ const { data: about } = await useFetch('/api/about')
     </section>
 
     <!-- service -->
-
+    <header>
+      <h2 class="h2 article-title">
+        {{ $t('Skills') }}
+      </h2>
+    </header>
     <section class="service">
       <br />
       <ul class="service-list">
-        <ServiceItem v-for="service in services" :key="service.id" :service="service" />
+        <ServiceItem
+          v-for="service in services"
+          :key="service.id"
+          :service="service"
+        />
       </ul>
     </section>
 
-
     <div class="modal-container" :class="{ active: activeModal }">
-      <div v-show="activeModal" class="overlay" :class="{ active: activeOverlay }" />
+      <div
+        v-show="activeModal"
+        class="overlay"
+        :class="{ active: activeOverlay }"
+      />
 
       <section class="testimonials-modal">
         <button class="modal-close-btn" @click="closeTestimonaial">
@@ -72,7 +82,7 @@ const { data: about } = await useFetch('/api/about')
 
         <div class="flex gap-5 mb-5 justify-start items-center">
           <div class="modal-avatar-box">
-            <img :src="testimonialItem.image" alt="Daniel lewis" width="80">
+            <img :src="testimonialItem.image" alt="Daniel lewis" width="80" />
           </div>
 
           <div class="modal-content">
@@ -84,15 +94,20 @@ const { data: about } = await useFetch('/api/about')
         </div>
 
         <div class="flex gap-5 items-start">
-          <img class="my-auto hidden md:block" src="/images/icon-quote.svg" alt="quote icon">
-          <p class="text-justify text-gray-400 text-sm md:text-md" v-html="testimonialItem.content?.en " />
+          <img
+            class="my-auto hidden md:block"
+            src="/images/icon-quote.svg"
+            alt="quote icon"
+          />
+          <p
+            class="text-justify text-gray-400 text-sm md:text-md"
+            v-html="testimonialItem.content?.en"
+          />
         </div>
         <div class="mt-2 flex justify-end text-sm text-gray-600 italic">
           Company Co.
         </div>
       </section>
     </div>
-
-  
   </article>
 </template>

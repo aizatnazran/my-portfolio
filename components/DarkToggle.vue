@@ -10,5 +10,8 @@ const themeColor = computed(() => {
 </script>
 
 <template>
-  <Button :icon="themeColor === 'dark' ? 'pi pi-sun' : 'pi pi-moon'" @click="toggleDark" />
+  <Button
+    :icon="themeColor === 'dark' ? 'pi pi-sun' : 'pi pi-moon'"
+    @click="toggleDark"
+  />
 </template>

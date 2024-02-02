@@ -6,14 +6,13 @@ export default defineEventHandler(() => {
       id: 1,
       title: 'HTML',
       icon: 'devicon:html5',
-      value: 90, // Adjust the percentage as needed
+      value: 90,
     },
     {
       id: 2,
       title: 'CSS',
       icon: 'devicon:css3',
-      value: 85, // Adjust the percentage as needed
+      value: 85,
     },
-    // Add more skills as needed
-]
+  ]
 })

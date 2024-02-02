@@ -10,8 +10,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: false,
   },
-  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }
-  ],
+  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
   colorMode: {
     classSuffix: '',
   },
@@ -47,7 +46,7 @@ export default defineNuxtConfig({
       warn: false,
     },
     compilerOptions: {
-      isCustomElement: tag => tag.startsWith('ion-'),
+      isCustomElement: (tag) => tag.startsWith('ion-'),
     },
   },
   loading: {
