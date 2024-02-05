@@ -242,6 +242,29 @@ export default defineEventHandler(() => {
       image: '/images/portfolio.png',
       url: 'https://github.com/aizatnazran/simple-portfolio',
     },
-    
+    {
+      id: 11,
+      title: 'File Management System',
+      category: {
+        id: 2, 
+        date: {
+          en: 'November 2023',
+        },
+        title: {
+          en: 'Back-End Development',
+        },
+         company: {
+          en: 'Personal Project',
+        },
+      },
+      content: {
+        en: 'I developed a simple file management system with basic CRUD (Create, Read, Update and Delete) functionalities using Vue.js and Node.js.',
+      },
+      desc: {
+        en: 'View Project',
+      }, 
+      image: '/images/file.png',
+      url: 'https://github.com/aizatnazran/simple-portfolio',
+    },
   ]
 })
