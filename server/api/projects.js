@@ -266,5 +266,29 @@ export default defineEventHandler(() => {
       image: '/images/file.png',
       url: 'https://github.com/aizatnazran/simple-portfolio',
     },
+    {
+      id: 12,
+      title: 'Personal Finance Mobile Application',
+      category: {
+        id: 2, 
+        date: {
+          en: 'November 2023',
+        },
+        title: {
+          en: 'Front-End Development',
+        },
+         company: {
+          en: 'Personal Project',
+        },
+      },
+      content: {
+        en: 'I developed a personal finance mobile application project using React Native and Expo.',
+      },
+      desc: {
+        en: 'View Project',
+      }, 
+      image: '/images/mobile.jpg',
+      url: 'https://github.com/aizatnazran/personal-finance-mobile-app.git',
+    },
   ]
 })
