@@ -48,7 +48,7 @@ export default defineEventHandler(() => {
         en: 'View Project',
       },
       image: '/images/sudu.png',
-      url: 'https://www.google.com/',
+      url: 'http://sudu.ai:8080/',
     },
      {
       id: 3,
@@ -194,5 +194,54 @@ export default defineEventHandler(() => {
       image: '/images/smart-service.jpg',
       url: 'https://www.google.com/',
     },
+    {
+      id: 9,
+      title: 'EduBoard',
+      category: {
+        id: 1, 
+        date: {
+          en: 'December 2023',
+        },
+        title: {
+          en: 'Front-End Development',
+        },
+         company: {
+          en: 'Personal Project',
+        },
+      },
+      content: {
+        en: 'I developed an educational dashboard for online learning. Used by educators to track progress in an online learning platform. ',
+      },
+      desc: {
+        en: 'View Project',
+      }, 
+      image: '/images/smart-service.jpg',
+      url: 'https://github.com/aizatnazran/EduBoard',
+    },
+    {
+      id: 10,
+      title: 'Portfolio',
+      category: {
+        id: 1, 
+        date: {
+          en: 'February 2023',
+        },
+        title: {
+          en: 'Front-End Development',
+        },
+         company: {
+          en: 'Personal Project',
+        },
+      },
+      content: {
+        en: 'I developed a simple portfolio to showcase my skills.',
+      },
+      desc: {
+        en: 'View Project',
+      }, 
+      image: '/images/portfolio.png',
+      url: 'https://github.com/aizatnazran/simple-portfolio',
+    },
+    
   ]
 })

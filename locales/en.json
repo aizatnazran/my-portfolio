@@ -3,8 +3,8 @@
   "goodbye": "Good Bye",
   "pageTitles": {
     "about": "About",
-    "resume": "Resume",
-    "portfolio": "Portfolio",
+    "experience": "Experience",
+    "projects": "Projects",
     "blog": "Blog",
     "github": "Github"
   }
