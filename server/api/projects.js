@@ -128,7 +128,7 @@ export default defineEventHandler(() => {
       category: {
         id: 3, 
         date: {
-          en: 'January 2023',
+          en: 'January 2024',
         },
         title: {
           en: 'Database and SQL',
@@ -176,7 +176,7 @@ export default defineEventHandler(() => {
       category: {
         id: 4, 
         date: {
-          en: 'January 2023',
+          en: 'January 2024',
         },
         title: {
           en: 'Messaging Services',
@@ -264,7 +264,7 @@ export default defineEventHandler(() => {
         en: 'View Project',
       }, 
       image: '/images/file.png',
-      url: 'https://github.com/aizatnazran/simple-portfolio',
+      url: 'https://github.com/aizatnazran/file-management-system.git',
     },
     {
       id: 12,
@@ -289,6 +289,30 @@ export default defineEventHandler(() => {
       }, 
       image: '/images/mobile.jpg',
       url: 'https://github.com/aizatnazran/personal-finance-mobile-app.git',
+    },
+    {
+      id: 13,
+      title: 'Whatsapp Scheduler',
+      category: {
+        id: 4, 
+        date: {
+          en: 'February 2024',
+        },
+        title: {
+          en: 'Messaging Services',
+        },
+         company: {
+          en: 'A Serious Company Sdn. Bhd.',
+        },
+      },
+      content: {
+        en: 'I developed a scheduler to automate WhatsApp message sending based on user-defined schedules. Supports message customization using Node.js and whatsapp-web.js',
+      },
+      desc: {
+        en: 'View Project',
+      }, 
+      image: '/images/smart-service.jpg',
+      url: 'https://github.com/aizatnazran/scheduler.git',
     },
   ]
 })
