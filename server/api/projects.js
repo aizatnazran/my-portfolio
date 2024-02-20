@@ -215,7 +215,7 @@ export default defineEventHandler(() => {
       desc: {
         en: 'View Project',
       }, 
-      image: '/images/smart-service.jpg',
+      image: '/images/edu.png',
       url: 'https://github.com/aizatnazran/EduBoard',
     },
     {
@@ -311,7 +311,7 @@ export default defineEventHandler(() => {
       desc: {
         en: 'View Project',
       }, 
-      image: '/images/smart-service.jpg',
+      image: '/images/scheduler.png',
       url: 'https://github.com/aizatnazran/scheduler.git',
     },
   ]
