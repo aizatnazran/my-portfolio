@@ -2,6 +2,8 @@
 
 - Resume/Portfolio website using Vue (Nuxt 3)
 
+![Portfolio](my-portfolio.png)
+
 ### Get Started
 
 - Install all the dependencies:
