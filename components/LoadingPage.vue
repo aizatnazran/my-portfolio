@@ -1,6 +1,6 @@
 <template>
   <div>
-    <cube loading="isLoading"></cube>
+  
   </div>
 </template>
 <script>
