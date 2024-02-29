@@ -270,7 +270,7 @@ export default defineEventHandler(() => {
       id: 12,
       title: 'Personal Finance Mobile Application',
       category: {
-        id: 2, 
+        id: 1, 
         date: {
           en: 'November 2023',
         },

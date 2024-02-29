@@ -99,9 +99,9 @@ function toggleMenu() {
         </li>
         <li class="contact-item">
           <a
-            href="/public/Aizat_Nazran's_Resume.pdf"
+            href="/images/Aizat_Nazran_Resume.pdf"
             class="download-resume-button"
-            download="Aizat.pdf"
+            download="Aizat Nazran's Resume.pdf"
           >
             <ion-icon name="download-outline"></ion-icon>
             <span>Download Resume</span>
