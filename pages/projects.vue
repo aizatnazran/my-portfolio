@@ -199,6 +199,7 @@ function closeItem() {
   padding-top: 56.25%; 
   position: relative;
   overflow: hidden;
+  border-radius: 15px; /* Adjust as necessary */
 }
 
 .project-img-wrapper {
@@ -211,8 +212,10 @@ function closeItem() {
 }
 
 .project-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
+  width: 100%; /* Adjust this if you want to maintain the image's aspect ratio */
+  height: auto; /* This will ensure the image scales properly */
+  object-fit: cover; /* This will cover the area, potentially cropping the image */
 }
+
+
 </style>
