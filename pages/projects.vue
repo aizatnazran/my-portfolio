@@ -109,17 +109,20 @@ function closeItem() {
         </ul>
       </div>
 
-      <ul class="project-list">
-        <li
-          v-for="project in projectList"
-          :key="project.id"
-          :class="{
-            active:
-              activeCategory === project.category.id || activeCategory === 0,
-          }"
-          class="project-item"
-        >
-          <a class="cursor-pointer" @click="showItem(project.id)">
+    <ul class="project-list">
+    <li
+      v-for="project in projectList"
+      :key="project.id"
+      :class="{
+        active:
+          activeCategory === project.category.id || activeCategory === 0,
+      }"
+      class="project-item"
+    >
+      <a class="cursor-pointer" @click="showItem(project.id)">
+        
+        <div class="project-img-container">
+          <div class="project-img-wrapper">
             <figure class="project-img">
               <div class="project-item-icon-box">
                 <ion-icon name="eye-outline" />
@@ -127,19 +130,22 @@ function closeItem() {
 
               <img :src="project.image" :alt="project.title" loading="lazy" />
             </figure>
+          </div>
+        </div>
 
-            <h3 class="project-title">{{ project.title }}</h3>
+        <h3 class="project-title">{{ project.title }}</h3>
 
-            <p class="project-category">{{ project.category.title?.en }}</p>
-          </a>
-        </li>
-      </ul>
+        <p class="project-category">{{ project.category.title?.en }}</p>
+      </a>
+    </li>
+  </ul>
 
       <div class="modal-container" :class="{ active: activeModal }">
         <div
           v-show="activeModal"
           class="overlay"
           :class="{ active: activeOverlay }"
+           @click="closeItem"
         />
 
         <section class="testimonials-modal block">
@@ -186,3 +192,27 @@ function closeItem() {
     </section>
   </article>
 </template>
+
+<style>
+.project-img-container {
+  width: 100%;
+  padding-top: 56.25%; 
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+</style>

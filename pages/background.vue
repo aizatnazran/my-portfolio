@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Experience',
+  title: 'Background',
 })
 </script>
 
@@ -8,7 +8,7 @@ useHead({
   <article class="resume active" data-page="resume">
     <header>
       <h2 class="h2 article-title">
-        {{ $t('Work Experience') }}
+       Work Experience
       </h2>
     </header>
 
@@ -32,7 +32,7 @@ useHead({
 
     <header>
       <h2 class="h2 article-title">
-        {{ $t('Education') }}
+        Education
       </h2>
     </header>
     <section class="timeline">

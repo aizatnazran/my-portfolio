@@ -314,5 +314,29 @@ export default defineEventHandler(() => {
       image: '/images/scheduler.png',
       url: 'https://github.com/aizatnazran/scheduler.git',
     },
+    {
+      id: 14,
+      title: 'Project Planner',
+      category: {
+        id: 1, 
+        date: {
+          en: 'February 2024',
+        },
+        title: {
+          en: 'Front-End Development',
+        },
+         company: {
+          en: 'Personal Project',
+        },
+      },
+      content: {
+        en: 'I developed a project planner web application that simplifies project management. Functionalities include basic create, read, update and delete (CRUD) operations. ',
+      },
+      desc: {
+        en: 'View Project',
+      }, 
+      image: '/images/planner.png',
+      url: 'https://github.com/aizatnazran/project-planner.git',
+    },
   ]
 })

@@ -2,7 +2,7 @@
 let isOpen = ref(false)
 
 function toggleMenu() {
-  isOpen = !isOpen
+  isOpen.value = !isOpen.value;
 }
 </script>
 
@@ -77,13 +77,13 @@ function toggleMenu() {
           <div class="contact-info">
             <p class="contact-title">Email</p>
 
-            <NuxtLink
-              to="mailto:aizatnazran@gmail.com"
-              class="social-link"
+            <a
+              href="mailto:aizatnazran@gmail.com"
+              class="social-link email-link"
               target="_blank"
             >
-              <a class="email-link">aizatnazran@gmail .com</a>
-            </NuxtLink>
+              aizatnazran@gmail .com
+            </a>
           </div>
         </li>
         <li class="contact-item">
@@ -98,11 +98,15 @@ function toggleMenu() {
           </div>
         </li>
         <li class="contact-item">
-    <a href="/path/to/your_resume.pdf" class="download-resume-button" download="Resume_Aizat_Nazran.pdf">
-      <ion-icon name="download-outline"></ion-icon>
-      <span>Download Resume</span>
-    </a>
-  </li>
+          <a
+            href="/public/Aizat_Nazran's_Resume.pdf"
+            class="download-resume-button"
+            download="Aizat.pdf"
+          >
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download Resume</span>
+          </a>
+        </li>
       </ul>
 
       <div class="separator" />
@@ -116,42 +120,40 @@ function toggleMenu() {
 }
 
 .download-resume-button {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 10px 15px; 
-  background-color: #b78625; 
-  color: white; 
-  border-radius: 20px; 
-  text-decoration: none; 
-  font-weight: bold; 
-  transition: background-color 0.3s; 
-  border: none; 
-  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: #b78625;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
   margin-bottom: 10px;
 }
 
 .download-resume-button ion-icon {
-  margin-right: 8px; 
+  margin-right: 8px;
 }
 
 .download-resume-button:hover {
-  background-color: #765718; /* Darker shade on hover */
+  background-color: #765718; 
 }
 
 .contacts-list {
-  /* Ensure that the entire list is full width and centered */
   display: flex;
   flex-direction: column;
-  align-items: center; /* This centers the children horizontally */
+  align-items: center;
   width: 100%;
 }
 
 .contact-item {
-  /* Style each contact item */
-  width: 100%; /* Make each item full width to the parent */
+  width: 100%; 
   display: flex;
-  justify-content: center; /* This centers the content of the item */
+  justify-content: center; 
   align-items: center;
 }
 </style>
