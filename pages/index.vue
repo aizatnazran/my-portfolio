@@ -115,3 +115,10 @@ const { data: about } = await useFetch('/api/about')
     </div>
   </article>
 </template>
+
+<style scoped>
+
+.about-text {
+  text-align: center;
+}
+</style>
