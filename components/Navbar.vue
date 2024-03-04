@@ -26,6 +26,11 @@
           Github
         </NuxtLink>
       </li>
+      <li class="navbar-item">
+        <NuxtLink to="/contact" class="navbar-link">
+          Contact
+        </NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>

@@ -1,4 +1,8 @@
 <script setup>
+useHead({
+  title: 'About',
+})
+
 import { useI18n } from 'vue-i18n'
 import { Icon } from '@iconify/vue'
 
@@ -41,7 +45,7 @@ const { data: about } = await useFetch('/api/about')
   <article class="about active" data-page="about">
     <header>
       <h2 class="h2 article-title">
-        {{ $t('pageTitles.about') }}
+     About
       </h2>
     </header>
 
