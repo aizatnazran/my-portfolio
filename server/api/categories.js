@@ -25,6 +25,12 @@ export default defineEventHandler(() => {
       title: {
         en: 'Messaging Services',
       },
+    },
+    {
+      id: 5,
+      title: {
+        en: 'DevOps',
+      },
     }
   ]
 })

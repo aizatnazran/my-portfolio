@@ -30,7 +30,16 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 4,
+    id: 4,
+    title: 'GitHub',
+    description: {
+      en: 'Experienced with GitHub for version control and collaborative development. Proficient in managing repositories, using Git for branching, merging, and pull requests, and ensuring code quality and team collaboration.'
+    },
+    icon: 'devicon:github',
+    image: null
+  },
+    {
+      id: 5,
       title: 'Vue',
       description: {
         en: 'I use Vue, a modern JavaScript and Typescript framework, while making dynamic and static websites and applications.',
@@ -39,7 +48,7 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 5,
+      id: 6,
       title: 'Tailwind CSS',
       description: {
         en: 'Skilled in using Tailwind CSS to streamline and expedite the styling process in web development. Proficient in creating responsive and visually appealing user interfaces by leveraging the utility-first approach of Tailwind CSS. Familiar with custom configurations and optimizing styles for efficient and maintainable code.',
@@ -48,7 +57,7 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 6,
+      id: 7,
       title: 'Node',
       description: {
         en: 'Experienced in building robust and scalable web applications using Node.js with Express to create powerful APIs.',
@@ -57,7 +66,7 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 7,
+      id: 8,
       title: 'MySQL',
       description: {
         en: 'Experienced in designing and managing relational databases with MySQL, ensuring efficient data storage, retrieval, and optimization for high-performance web applications. Proficient in writing complex queries and stored procedures',
@@ -66,7 +75,7 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 8,
+      id: 9,
       title: 'PostgreSQL',
       description: {
         en: 'Skilled in utilizing PostgreSQL, a powerful open-source relational database, for developing robust and secure data storage solutions. Proficient in database design, writing complex SQL queries, and ensuring data integrity.',
@@ -75,7 +84,7 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 9,
+      id: 10,
       title: 'Docker',
       description: {
         en: 'Proficient in utilizing Docker to containerize applications, facilitating seamless deployment across various environments. Experienced in creating Docker images, managing containers, and orchestrating multi-container applications for efficient and scalable deployment.',
@@ -84,7 +93,25 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 10,
+    id: 11,
+    title: 'Kubernetes',
+    description: {
+      en: 'Proficient in utilizing Kubernetes for container orchestration and management. Expertise in deploying, scaling, and managing containerized applications in clusters, ensuring high availability and efficient resource utilization.'
+    },
+    icon: 'devicon:kubernetes',
+    image: null
+  },
+    {
+    id: 12,
+    title: 'Jenkins',
+    description: {
+      en: 'Experienced in using Jenkins for continuous integration and continuous deployment (CI/CD). Skilled in creating automated pipelines for build, test, and deployment processes, enhancing development workflow and ensuring rapid delivery of software.'
+    },
+    icon: 'devicon:jenkins',
+    image: null
+  },
+    {
+      id: 13,
       title: 'Linux',
       description: {
         en: 'Skilled in working with Linux operating systems, including administration, configuration, and troubleshooting. Proficient in command-line utilities, shell scripting, and ensuring the security and performance of Linux-based servers.',
@@ -93,7 +120,7 @@ export default defineEventHandler(() => {
       image: null,
     },
     {
-      id: 11,
+      id: 14,
       title: 'Amazon Web Services (AWS)',
       description: {
         en: 'Experienced in leveraging the power of AWS for cloud-based solutions. Proficient in deploying, configuring, and managing AWS services, including compute, storage, and networking resources. Skilled in optimizing and securing cloud infrastructure for scalable and reliable applications.',

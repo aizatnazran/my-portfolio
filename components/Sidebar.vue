@@ -16,18 +16,15 @@ function toggleMenu() {
       <div class="info-content">
         <h1 class="name" title="Aizat Nazran">Aizat Nazran</h1>
 
-        <p
-          class="title text-center xl:block flex items-center justify-center gap-1"
-        >
-          <span class="xl:after:content-[''] after:content-['']"
-            >Full-Stack Developer</span
-          >
+        <p class="title text-center xl:block flex items-center justify-center gap-1">
+          <span class="xl:after:content-[''] after:content-['']">
+            Full-Stack Developer
+          </span>
         </p>
       </div>
 
       <button class="info_more-btn" @click="isOpen = !isOpen">
         <span>Show Contacts</span>
-
         <ion-icon name="chevron-down" />
       </button>
     </div>
@@ -44,12 +41,9 @@ function toggleMenu() {
           <div class="contact-info">
             <p class="contact-title">Github</p>
 
-            <a
-              href="https://github.com/aizatnazran"
-              class="contact-link"
-              target="_blank"
-              >aizatnazran</a
-            >
+            <a href="https://github.com/aizatnazran" class="contact-link" target="_blank">
+              aizatnazran
+            </a>
           </div>
         </li>
 
@@ -61,14 +55,12 @@ function toggleMenu() {
           <div class="contact-info">
             <p class="contact-title">Linkedin</p>
 
-            <a
-              href="https://www.linkedin.com/in/aizat-nazran/"
-              class="contact-link"
-              target="_blank"
-              >Aizat Nazran</a
-            >
+            <a href="https://www.linkedin.com/in/aizat-nazran/" class="contact-link" target="_blank">
+              Aizat Nazran
+            </a>
           </div>
         </li>
+
         <li class="contact-item">
           <div class="icon-box">
             <ion-icon name="mail-outline" />
@@ -77,15 +69,12 @@ function toggleMenu() {
           <div class="contact-info">
             <p class="contact-title">Email</p>
 
-            <a
-              href="mailto:aizatnazran@gmail.com"
-              class="social-link email-link"
-              target="_blank"
-            >
-              aizatnazran@gmail .com
+            <a href="mailto:aizatnazran@gmail.com" class="social-link email-link contact-link" target="_blank">
+              aizatnazran@gmail.com
             </a>
           </div>
         </li>
+
         <li class="contact-item">
           <div class="icon-box">
             <ion-icon name="location-outline" />
@@ -97,12 +86,9 @@ function toggleMenu() {
             <address>Cheras, Kuala Lumpur</address>
           </div>
         </li>
+
         <li class="contact-item">
-          <a
-            href="/images/Aizat_Nazran_Resume.pdf"
-            class="download-resume-button"
-            download="Aizat Nazran's Resume.pdf"
-          >
+          <a href="/images/Aizat_Nazran_Resume.pdf" class="download-resume-button" download="Aizat Nazran's Resume.pdf">
             <ion-icon name="download-outline"></ion-icon>
             <span>Download Resume</span>
           </a>
@@ -115,6 +101,7 @@ function toggleMenu() {
 </template>
 
 <style>
+/* Original layout and positioning */
 .email-link {
   color: var(--white-2);
 }
@@ -140,7 +127,7 @@ function toggleMenu() {
 }
 
 .download-resume-button:hover {
-  background-color: #765718; 
+  background-color: #765718;
 }
 
 .contacts-list {
@@ -151,9 +138,29 @@ function toggleMenu() {
 }
 
 .contact-item {
-  width: 100%; 
+  width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
+}
+
+/* Hover animation for text in contact links */
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact-link:hover {
+  color: #ffb400; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge text on hover */
+}
+
+/* Ensure other elements don't change on hover */
+.contact-link:hover .contact-info,
+.contact-link:hover .icon-box,
+.contact-link:hover ion-icon {
+  transform: none;
+  color: inherit;
 }
 </style>
