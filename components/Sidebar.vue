@@ -16,6 +16,11 @@ function toggleMenu() {
       <div class="info-content">
         <h1 class="name" title="Aizat Nazran">Aizat Nazran</h1>
 
+        <p class="title text-center xl:block flex items-center justify-center gap-1 ">
+          <span class="xl:after:content-[''] after:content-['']">
+            DevOps Engineer
+          </span>
+        </p>
         <p class="title text-center xl:block flex items-center justify-center gap-1">
           <span class="xl:after:content-[''] after:content-['']">
             Full-Stack Developer
@@ -104,6 +109,10 @@ function toggleMenu() {
 /* Original layout and positioning */
 .email-link {
   color: var(--white-2);
+}
+
+.info-content .title {
+  margin-bottom: 3px; 
 }
 
 .download-resume-button {

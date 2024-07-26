@@ -31,6 +31,12 @@ export default defineEventHandler(() => {
       title: {
         en: 'DevOps',
       },
-    }
+    },
+    {
+      id: 6,
+      title: {
+        en: 'Bots',
+      },
+    },
   ]
 })
