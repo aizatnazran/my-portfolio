@@ -5,7 +5,22 @@ import '@egjs/vue3-flicking/dist/flicking.css'
 import { Icon } from '@iconify/vue'
 
 useHead({
-  title: 'Projects',
+  title: 'Projects - Aizat Nazran | DevOps Engineer',
+  meta: [
+    { name: 'description', content: 'Explore the project portfolio of Aizat Nazran, a DevOps Engineer and full-stack developer. Learn about the various projects and solutions delivered across different industries.' }, 
+    { name: 'keywords', content: 'Aizat Nazran, Muhamad Aizat Nazran, project portfolio, devops engineer, full-stack developer, software development, projects, categories' }, 
+    { property: 'og:title', content: 'Projects - Aizat Nazran | DevOps Engineer & Full-Stack Developer' }, 
+    { property: 'og:description', content: 'Explore the projects and solutions delivered by Aizat Nazran as a DevOps Engineer and full-stack developer.' }, 
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://aizat.dev/projects' }, 
+    { property: 'og:image', content: 'https://aizat.dev/images/avatar2.jpg' }, 
+    { property: 'og:image:alt', content: 'Aizat Nazran\'s profile picture' }, 
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Projects - Aizat Nazran | DevOps Engineer & Full-Stack Developer' },
+    { name: 'twitter:description', content: 'Discover Aizat Nazran\'s projects and development solutions.' },
+    { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
+    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' }
+  ]
 })
 
 const { locale } = useI18n({ useScope: 'global' })

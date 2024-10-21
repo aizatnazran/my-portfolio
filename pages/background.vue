@@ -1,6 +1,21 @@
 <script setup>
 useHead({
-  title: 'Background',
+  title: 'Background - Aizat Nazran | DevOps Engineer',
+  meta: [
+    { name: 'description', content: 'Discover the educational background and work experience of Aizat Nazran, a DevOps Engineer and full-stack developer.' }, 
+    { name: 'keywords', content: 'Muhamad Aizat Nazran, Aizat Nazran, background, education, work experience, software engineer, full-stack developer, devops engineer, devops' }, 
+    { property: 'og:title', content: 'Background - Aizat Nazran | DevOps Engineer' }, 
+    { property: 'og:description', content: 'Learn about Aizat Nazran\'s education and his journey in the DevOps field.' }, 
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://aizat.dev/background' }, 
+    { property: 'og:image', content: 'https://aizat.dev/images/avatar2.jpg' }, 
+    { property: 'og:image:alt', content: 'Aizat Nazran\'s profile picture' }, 
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Background - Aizat Nazran | DevOps Engineer' },
+    { name: 'twitter:description', content: 'A detailed look at the education and professional background of Aizat Nazran' },
+    { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
+    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' } ,
+  ]
 })
 </script>
 
@@ -68,26 +83,26 @@ useHead({
           <h4 class="h4 timeline-item-title">AWS-COA - Cloud Operations on AWS</h4>
           <span>Trainocate</span>
           <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">LF-flf6o71omb</p>
+          <p class="timeline-text">MTM3MDc0</p>
         </li>
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">Certified DevOps Foundation</h4>
           <span>CCSD Council</span>
           <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">MTM3MDc0</p>
+          <p class="timeline-text">3260f1a</p>
         </li>
 
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">Certified Kubernetes Administrator</h4>
           <span>The Linux Foundation</span>
           <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">3260f1a</p>
+          <p class="timeline-text">LF-flf6o71omb</p>
         </li>
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">AWS re/Start Graduate</h4>
           <span>The Linux Foundation</span>
           <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">3260f1a</p>
+          <p class="timeline-text">13d0c3b8-0ef6-4657-bf10-0879f21a50ba</p>
         </li>
       </ol>
     </section>

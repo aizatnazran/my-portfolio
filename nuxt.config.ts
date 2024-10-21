@@ -53,4 +53,24 @@ export default defineNuxtConfig({
     color: 'blue',
     height: '5px',
   },
+  app: {
+    head: {
+      titleTemplate: '%s - Aizat Nazran | DevOps Engineer',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'Learn more about Aizat Nazran, a DevOps Engineer and full-stack developer.' },
+        { hid: 'keywords', name: 'keywords', content: 'Aizat Nazran, DevOps Engineer, Full-stack Developer, Skills, Testimonials' },
+        // Open Graph / Social sharing
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://aizat.dev/' },
+        { property: 'og:image', content: 'https://aizat.dev/images/avatar2.jpg' },
+        { property: 'og:image:alt', content: 'Aizat Nazran\'s profile picture' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  },
 })
