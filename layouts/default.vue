@@ -6,12 +6,9 @@ useHead({
   htmlAttrs: {
     lang: locale,
   },
-  titleTemplate: (pageTitle) => {
-    return pageTitle ? `${pageTitle} - Aizat Nazran ` : 'Aizat Nazran'
-  },
   meta: [
     { charset: 'utf-8' },
-    { name: 'description', content: 'Personal site about Aizat Nazran.' },
+    { name: 'description', content: 'Aizat Nazran\'s Portfolio' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
   ],
   link: [

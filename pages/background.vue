@@ -100,7 +100,7 @@ useHead({
         </li>
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">AWS re/Start Graduate</h4>
-          <span>The Linux Foundation</span>
+          <span>Amazon Web Services Training and Certification</span>
           <p class="timeline-item-desc">Credential ID</p>
           <p class="timeline-text">13d0c3b8-0ef6-4657-bf10-0879f21a50ba</p>
         </li>
