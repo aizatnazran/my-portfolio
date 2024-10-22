@@ -4,14 +4,14 @@ useHead({
   meta: [
     { name: 'description', content: 'Explore the GitHub repositories of Aizat Nazran, a DevOps Engineer and full-stack developer.' }, 
     { name: 'keywords', content: 'Aizat Nazran, github, repositories, devops engineer, full-stack developer, projects, GitHub profile' }, 
-    { property: 'og:title', content: 'Github Repositories - Aizat Nazran | DevOps Engineer & Full-Stack Developer' }, 
+    { property: 'og:title', content: 'Github Repositories - Aizat Nazran | DevOps Engineer' }, 
     { property: 'og:description', content: 'View the open-source projects and repositories contributed to by Aizat Nazran on GitHub.' }, 
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://aizat.dev/github' }, 
     { property: 'og:image', content: 'https://aizat.dev/images/avatar2.jpg' }, 
     { property: 'og:image:alt', content: 'Aizat Nazran\'s profile picture' }, 
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Github Repositories - Aizat Nazran | DevOps Engineer & Full-Stack Developer' },
+    { name: 'twitter:title', content: 'Github Repositories - Aizat Nazran | DevOps Engineer' },
     { name: 'twitter:description', content: 'Explore Aizat Nazran\'s contributions on GitHub and open-source projects.' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
     { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' }

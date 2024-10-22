@@ -45,10 +45,7 @@ function toggleMenu() {
 
           <div class="contact-info">
             <p class="contact-title">Github</p>
-
-            <a href="https://github.com/aizatnazran" class="contact-link" target="_blank">
-              aizatnazran
-            </a>
+            <a href="https://github.com/aizatnazran" class="contact-link" target="_blank">aizatnazran</a>
           </div>
         </li>
 
@@ -59,10 +56,7 @@ function toggleMenu() {
 
           <div class="contact-info">
             <p class="contact-title">Linkedin</p>
-
-            <a href="https://www.linkedin.com/in/aizat-nazran/" class="contact-link" target="_blank">
-              Aizat Nazran
-            </a>
+            <a href="https://www.linkedin.com/in/aizat-nazran/" class="contact-link" target="_blank">Aizat Nazran</a>
           </div>
         </li>
 
@@ -73,10 +67,7 @@ function toggleMenu() {
 
           <div class="contact-info">
             <p class="contact-title">Email</p>
-
-            <a href="mailto:aizatnazran@gmail.com" class="social-link email-link contact-link" target="_blank">
-              aizatnazran@gmail.com
-            </a>
+            <a href="mailto:aizatnazran@gmail.com" class="social-link email-link contact-link" target="_blank">aizatnazran@gmail.com</a>
           </div>
         </li>
 
@@ -87,13 +78,13 @@ function toggleMenu() {
 
           <div class="contact-info">
             <p class="contact-title">Location</p>
-
             <address>Cheras, Kuala Lumpur</address>
           </div>
         </li>
 
+        <!-- Download Resume Button -->
         <li class="contact-item">
-          <a href="/images/Aizat_Nazran_Resume.pdf" class="download-resume-button" download="Aizat Nazran's Resume.pdf">
+          <a href="/images/Aizat_Nazran_Resume.pdf" class="download-resume-btn" download="Aizat Nazran's Resume.pdf">
             <ion-icon name="download-outline"></ion-icon>
             <span>Download Resume</span>
           </a>
@@ -115,28 +106,56 @@ function toggleMenu() {
   margin-bottom: 3px; 
 }
 
-.download-resume-button {
-  display: flex;
+/* Adjusted styling to ensure uniform shape */
+.download-resume-btn {
+  position: relative;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 15px; /* Ensure rounded corners */
+  font-size: 13px;
+  color: var(--vegas-gold);
+  background: var(--border-gradient-onyx);
   padding: 10px 15px;
-  background-color: #b78625;
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 10px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+  overflow: hidden; /* Prevent pseudo-element overflow */
 }
 
-.download-resume-button ion-icon {
+.download-resume-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.download-resume-btn:hover::before,
+.download-resume-btn:focus::before {
+  background: var(--bg-gradient-yellow-2); /* Change background on hover/focus */
+}
+
+.download-resume-btn ion-icon {
   margin-right: 8px;
 }
 
-.download-resume-button:hover {
-  background-color: #765718;
+.download-resume-btn span {
+  display: inline;
+}
+
+/* Ensure button text color and layout */
+.download-resume-btn a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contacts-list {
@@ -161,11 +180,10 @@ function toggleMenu() {
 }
 
 .contact-link:hover {
-  color: #ffb400; /* Change text color on hover */
-  transform: scale(1.05); /* Slightly enlarge text on hover */
+  color: #ffb400;
+  transform: scale(1.05);
 }
 
-/* Ensure other elements don't change on hover */
 .contact-link:hover .contact-info,
 .contact-link:hover .icon-box,
 .contact-link:hover ion-icon {
