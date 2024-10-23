@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue';
+import { Icon } from '@iconify/vue'
 useHead({
   title: 'Background - Aizat Nazran | DevOps Engineer',
   meta: [
@@ -14,18 +16,85 @@ useHead({
     { name: 'twitter:title', content: 'Background - Aizat Nazran | DevOps Engineer' },
     { name: 'twitter:description', content: 'A detailed look at the education and professional background of Aizat Nazran' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
-    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' } ,
+    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' },
   ]
 })
+
+// Modal logic reused from Projects.vue
+const activeModal = ref(false);
+const activeOverlay = ref(false);
+const activeCertificate = ref({});
+const certificates = [
+  {
+    id: 1,
+    title: 'AWS-COA - Cloud Operations on AWS',
+    category: {
+      date: 'September 2024',
+      title: 'Cloud Certification',
+      company: 'Trainocate',
+    },
+    content: 'AWS Cloud Operations Certificate for cloud infrastructure management',
+    image: '/images/Trainocate.jpeg',
+    desc: 'View Certificate',
+  },
+  {
+    id: 2,
+    title: 'Certified Kubernetes Administrator',
+    category: {
+      date: 'July 2024',
+      title: 'Kubernetes Certification',
+      company: 'The Linux Foundation',
+    },
+    content: 'Certified Kubernetes Administrator',
+    image: '/images/CNCF.png',
+    desc: 'View Certificate',
+  },
+  {
+    id: 3,
+    title: 'Certified DevOps Foundation',
+    category: {
+      date: 'June 2024',
+      title: 'DevOps Certification',
+      company: 'CCSD Council',
+    },
+    content: 'Foundation-level knowledge on DevOps principles',
+    image: '/images/CCSD.png',
+    desc: 'View Certificate',
+  },
+  
+  {
+    id: 4,
+    title: 'AWS re/Start Graduate',
+    category: {
+      date: 'January 2024',
+      title: 'Cloud Training',
+      company: 'Amazon Web Services',
+    },
+    content: 'Graduate from the AWS re/Start program',
+    image: '/images/WEPS.png',
+    desc: 'View Certificate',
+  }
+];
+
+// The function should expect the ID of the certificate
+function showCertificate(certificateId) {
+  // Find the certificate using the provided ID
+  activeCertificate.value = certificates.find(certificate => certificate.id === certificateId);
+  activeModal.value = true;
+  activeOverlay.value = true;
+}
+
+function closeModal() {
+  activeModal.value = false;
+  activeOverlay.value = false;
+  activeCertificate.value = {}; // Reset the certificate
+}
 </script>
 
 <template>
   <article class="resume active" data-page="resume">
-   
     <header>
-      <h2 class="h2 article-title">
-        Education
-      </h2>
+      <h2 class="h2 article-title">Education</h2>
     </header>
     <section class="timeline">
       <ol class="timeline-list">
@@ -34,8 +103,7 @@ useHead({
           <span>September 2019 — September 2023</span>
           <p class="timeline-item-desc">Gombak</p>
           <p class="timeline-text">Bachelor of Computer Science (Honours)</p>
-                    <p class="timeline-text">Majoring in Software Engineering</p>
-
+          <p class="timeline-text">Majoring in Software Engineering</p>
         </li>
 
         <li class="timeline-item">
@@ -45,12 +113,10 @@ useHead({
           <p class="timeline-text">Foundation in Engineering</p>
         </li>
       </ol>
-      
     </section>
+
     <header>
-      <h2 class="h2 article-title">
-       Work Experience
-      </h2>
+      <h2 class="h2 article-title">Work Experience</h2>
     </header>
 
     <section class="timeline">
@@ -71,40 +137,208 @@ useHead({
         </li>
       </ol>
     </section>
+
     <header>
-      <h2 class="h2 article-title">
-      Certificates
-      </h2>
+      <h2 class="h2 article-title">Certificates</h2>
     </header>
 
-    <section class="timeline">
+      <section class="timeline">
       <ol class="timeline-list">
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">AWS-COA - Cloud Operations on AWS</h4>
-          <span>Trainocate</span>
-          <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">MTM3MDc0</p>
-        </li>
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">Certified DevOps Foundation</h4>
-          <span>CCSD Council</span>
-          <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">3260f1a</p>
-        </li>
-
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">Certified Kubernetes Administrator</h4>
-          <span>The Linux Foundation</span>
-          <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">LF-flf6o71omb</p>
-        </li>
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">AWS re/Start Graduate</h4>
-          <span>Amazon Web Services Training and Certification</span>
-          <p class="timeline-item-desc">Credential ID</p>
-          <p class="timeline-text">13d0c3b8-0ef6-4657-bf10-0879f21a50ba</p>
+        <li
+          class="timeline-item"
+          v-for="certificate in certificates"
+          :key="certificate.id"
+        >
+          <h4 class="h4 timeline-item-title">{{ certificate.title }}</h4>
+          <span>{{ certificate.category.company }}</span>
+          <p class="timeline-item-desc">{{ certificate.category.date }}</p>
+          <!-- Pass the correct certificate ID here -->
+          <button
+            class="view-certificate-btn"
+            @click="showCertificate(certificate.id)"
+          >
+            <ion-icon name="eye-outline"></ion-icon>
+            <span>{{ certificate.desc }}</span>
+          </button>
         </li>
       </ol>
     </section>
+
+    <!-- Modal for showing certificate -->
+      <!-- Modal for showing certificate details -->
+    <div class="modal-container" :class="{ active: activeModal }">
+      <div
+        v-show="activeModal"
+        class="overlay"
+        :class="{ active: activeOverlay }"
+        @click="closeModal"
+      ></div>
+
+      <section class="testimonials-modal block">
+        <button class="modal-close-btn" @click="closeModal">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <div>
+          <figure>
+            <img :src="activeCertificate.image" class="rounded-lg" :alt="activeCertificate.title" />
+          </figure>
+        </div>
+
+        <div class="modal-content space-y-3 mt-4">
+          <h4 class="h3 modal-title">{{ activeCertificate.title }}</h4>
+
+          <small class="flex items-center justify-start gap-2 text-gray-500">
+            <Icon icon="foundation:calendar" /><span>{{ activeCertificate.category?.date }}</span>
+            | <Icon icon="dashicons:category" /><span>{{ activeCertificate.category?.title }}</span>
+            |  <Icon icon="dashicons:building" /><span>{{ activeCertificate.category?.company }}</span>
+          </small>
+
+          <p class="text-justify">{{ activeCertificate.content }}</p>
+        </div>
+      </section>
+    </div>
   </article>
 </template>
+
+<style scoped>
+/* Styling reused for view certificate button based on download resume button */
+.view-certificate-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px; /* Ensure rounded corners */
+  font-size: 13px;
+  color: var(--vegas-gold);
+  background: var(--border-gradient-onyx);
+  padding: 10px 15px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+  overflow: hidden; /* Prevent pseudo-element overflow */
+}
+
+.view-certificate-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.view-certificate-btn:hover::before,
+.view-certificate-btn:focus::before {
+  background: var(--bg-gradient-yellow-2); /* Change background on hover/focus */
+}
+
+.view-certificate-btn ion-icon {
+  margin-right: 8px;
+}
+
+.view-certificate-btn span {
+  display: inline;
+}
+
+/* Modal styling */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 20;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-container.active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsl(0, 0%, 5%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.overlay.active {
+  opacity: 0.8;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.testimonials-modal {
+  background: var(--eerie-black-2); /* Change from white to dark background */
+  position: relative;
+  padding: 15px;
+  margin: 15px 12px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
+}
+
+.modal-container.active .testimonials-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--onyx);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-2);
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  opacity: 1;
+}
+
+.modal-close-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.modal-title {
+  margin-bottom: 4px;
+}
+
+.modal-content p {
+  color: var(--light-gray); /* Adjust content color */
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+</style>
