@@ -16,16 +16,21 @@ function toggleMenu() {
       <div class="info-content">
         <h1 class="name" title="Aizat Nazran">Aizat Nazran</h1>
 
-        <p class="title text-center xl:block flex items-center justify-center gap-1 ">
-          <span class="xl:after:content-[''] after:content-['']">
-            DevOps Engineer
-          </span>
-        </p>
-        <p class="title text-center xl:block flex items-center justify-center gap-1">
-          <span class="xl:after:content-[''] after:content-['']">
-            Full-Stack Developer
-          </span>
-        </p>
+        <a href="https://www.atlassian.com/devops/what-is-devops/devops-engineer" target="_blank" class="title-link">
+    <p class="title text-center xl:block flex items-center justify-center gap-1">
+      <span class="xl:after:content-[''] after:content-['']">
+        DevOps Engineer
+      </span>
+    </p>
+  </a>
+
+  <a href="https://www.coursera.org/articles/full-stack-developer" target="_blank" class="title-link">
+    <p class="title text-center xl:block flex items-center justify-center gap-1">
+      <span class="xl:after:content-[''] after:content-['']">
+        Full-Stack Developer
+      </span>
+    </p>
+  </a>
       </div>
 
       <button class="info_more-btn" @click="isOpen = !isOpen">
@@ -97,6 +102,25 @@ function toggleMenu() {
 </template>
 
 <style>
+
+.title-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease-in-out; 
+  padding: 3px 8px;
+  border-radius: 8px;
+  background-color: var(--bg-gradient-jet); 
+}
+
+.title-link:hover {
+  background-color: var(--bg-gradient-hover); 
+  color: var(--hover-color); 
+  transform: scale(1.05); 
+}
+
+.title-link:hover p {
+  color: inherit;
+}
 .email-link {
   color: var(--white-2);
 }
@@ -172,12 +196,13 @@ function toggleMenu() {
 .contact-link {
   text-decoration: none;
   color: inherit;
-  transition: color 0.3s, transform 0.3s;
+   display: inline-block;
+  transition: all 0.3s ease-in-out; 
 }
 
 .contact-link:hover {
   color: #ffb400;
-  transform: scale(1.05);
+  transform: translateX(10px); 
 }
 
 .contact-link:hover .contact-info,
