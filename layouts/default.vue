@@ -3,19 +3,19 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n({ useScope: 'global' })
 
 useHead({
-  title: 'Aizat Nazran | DevOps Engineer',
+  title: 'Aizat Nazran\'s Portfolio | DevOps Engineer',
   meta: [
     { charset: 'utf-8' },
-    { name: 'description', content: 'Welcome to Aizat Nazran\'s portfolio. Discover his projects, skills, and experience in DevOps and full-stack development.' },
+    { hid: 'description', name: 'description', content: 'Welcome to Aizat Nazran\'s portfolio. Discover his projects, skills, and experience in DevOps and full-stack development.' },
     { name: 'keywords', content: 'Aizat Nazran, Muhamad Aizat Nazran, portfolio, DevOps Engineer, full-stack developer, software projects, developer skills' },
-    { property: 'og:title', content: 'Aizat Nazran | DevOps Engineer' },
+    { property: 'og:title', content: 'Aizat Nazran\'s Portfolio | DevOps Engineer' },
     { property: 'og:description', content: 'Explore Aizat Nazran\'s professional portfolio, showcasing skills and projects in software engineering and DevOps.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://aizat.dev' },
     { property: 'og:image', content: 'https://aizat.dev/images/avatar2.jpg' },
     { property: 'og:image:alt', content: 'Aizat Nazran\'s profile picture' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Aizat Nazran | DevOps Engineer' },
+    { name: 'twitter:title', content: 'Aizat Nazran\'s Portfolio | DevOps Engineer' },
     { name: 'twitter:description', content: 'Discover the projects and expertise of Aizat Nazran in full-stack development and DevOps.' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
     { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' },

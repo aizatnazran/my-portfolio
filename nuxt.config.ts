@@ -55,21 +55,47 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      title: "Aizat Nazran's Portfolio | DevOps Engineer",
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Learn more about Aizat Nazran, a DevOps Engineer and full-stack developer.' },
-        { hid: 'keywords', name: 'keywords', content: 'Aizat Nazran, DevOps Engineer, Full-stack Developer, Skills, Testimonials' },
-        // Open Graph / Social sharing
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Welcome to Aizat Nazran\'s portfolio, showcasing his skills and experience as a Full Stack Developer and DevOps Engineer, specializing in scalable solutions.',
+        }, 
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'Aizat Nazran, Muhamad Aizat Nazran, Full Stack Developer, DevOps Engineer, Portfolio, Software Development, Kubernetes, Docker, CI/CD, Jenkins',
+        }, 
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://aizat.dev/' },
+        {
+          property: 'og:title',
+          content: "Aizat Nazran's Portfolio | DevOps Engineer",
+        },
+        {
+          property: 'og:description',
+          content: 'Explore Aizat Nazran\'s portfolio, showcasing his expertise in full-stack development and DevOps.',
+        },
         { property: 'og:image', content: 'https://aizat.dev/images/avatar2.jpg' },
         { property: 'og:image:alt', content: 'Aizat Nazran\'s profile picture' },
         { name: 'twitter:card', content: 'summary_large_image' },
+        {
+          name: 'twitter:title',
+          content: "Aizat Nazran's Portfolio | DevOps Engineer",
+        }, 
+        {
+          name: 'twitter:description',
+          content: 'Discover Aizat Nazran\'s skills and projects in full-stack development and DevOps.',
+        }, 
+        { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
+        { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ]
-    }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
   },
 })

@@ -97,7 +97,6 @@ function toggleMenu() {
 </template>
 
 <style>
-/* Original layout and positioning */
 .email-link {
   color: var(--white-2);
 }
@@ -106,13 +105,12 @@ function toggleMenu() {
   margin-bottom: 3px; 
 }
 
-/* Adjusted styling to ensure uniform shape */
 .download-resume-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 15px; /* Ensure rounded corners */
+  border-radius: 15px; 
   font-size: 13px;
   color: var(--vegas-gold);
   background: var(--border-gradient-onyx);
@@ -120,7 +118,7 @@ function toggleMenu() {
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
-  overflow: hidden; /* Prevent pseudo-element overflow */
+  overflow: hidden;
 }
 
 .download-resume-btn::before {
@@ -138,7 +136,7 @@ function toggleMenu() {
 
 .download-resume-btn:hover::before,
 .download-resume-btn:focus::before {
-  background: var(--bg-gradient-yellow-2); /* Change background on hover/focus */
+  background: var(--bg-gradient-yellow-2); 
 }
 
 .download-resume-btn ion-icon {
@@ -149,7 +147,6 @@ function toggleMenu() {
   display: inline;
 }
 
-/* Ensure button text color and layout */
 .download-resume-btn a {
   color: inherit;
   text-decoration: none;
@@ -172,7 +169,6 @@ function toggleMenu() {
   align-items: center;
 }
 
-/* Hover animation for text in contact links */
 .contact-link {
   text-decoration: none;
   color: inherit;

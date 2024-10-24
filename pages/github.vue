@@ -2,7 +2,7 @@
 useHead({
   title: 'Github Repositories - Aizat Nazran | DevOps Engineer',
   meta: [
-    { name: 'description', content: 'Explore the GitHub repositories of Aizat Nazran, a DevOps Engineer and full-stack developer.' }, 
+    { hid: 'description', name: 'description', content: 'Explore the GitHub repositories of Aizat Nazran, a DevOps Engineer and full-stack developer.' }, 
     { name: 'keywords', content: 'Aizat Nazran, github, repositories, devops engineer, full-stack developer, projects, GitHub profile' }, 
     { property: 'og:title', content: 'Github Repositories - Aizat Nazran | DevOps Engineer' }, 
     { property: 'og:description', content: 'View the open-source projects and repositories contributed to by Aizat Nazran on GitHub.' }, 

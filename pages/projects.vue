@@ -7,7 +7,7 @@ import { Icon } from '@iconify/vue'
 useHead({
   title: 'Projects - Aizat Nazran | DevOps Engineer',
   meta: [
-    { name: 'description', content: 'Explore the project portfolio of Aizat Nazran, a DevOps Engineer and full-stack developer. Learn about the various projects and solutions delivered across different industries.' }, 
+    { hid: 'description', name: 'description', content: 'Explore the project portfolio of Aizat Nazran, a DevOps Engineer and full-stack developer. Learn about the various projects and solutions delivered across different industries.' }, 
     { name: 'keywords', content: 'Aizat Nazran, Muhamad Aizat Nazran, project portfolio, devops engineer, full-stack developer, software development, projects, categories' }, 
     { property: 'og:title', content: 'Projects - Aizat Nazran | DevOps Engineer' }, 
     { property: 'og:description', content: 'Explore the projects and solutions delivered by Aizat Nazran as a DevOps Engineer and full-stack developer.' }, 

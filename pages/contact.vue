@@ -20,7 +20,7 @@
 useHead({
   title: 'Contact - Aizat Nazran | DevOps Engineer',
   meta: [
-    { name: 'description', content: 'Contact Aizat Nazran for collaborations, tech opportunities, or inquiries about full-stack development and DevOps engineering services.' }, 
+    { hid: 'description', name: 'description', content: 'Contact Aizat Nazran for collaborations, tech opportunities, or inquiries about full-stack development and DevOps engineering services.' }, 
     { name: 'keywords', content: 'Aizat Nazran, Muhamad Aizat Nazran, contact, full-stack developer, devops engineer, collaborate, hire me, tech opportunities' }, 
     { property: 'og:title', content: 'Contact - Aizat Nazran | DevOps Engineer' }, 
     { property: 'og:description', content: 'Get in touch with Aizat Nazran for collaborations or hiring opportunities in DevOps and full-stack development.' }, 

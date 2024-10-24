@@ -4,7 +4,7 @@ import { Icon } from '@iconify/vue'
 useHead({
   title: 'Background - Aizat Nazran | DevOps Engineer',
   meta: [
-    { name: 'description', content: 'Discover the educational background and work experience of Aizat Nazran, a DevOps Engineer and full-stack developer.' }, 
+    { hid: 'description', name: 'description', content: 'Discover the educational background and work experience of Aizat Nazran, a DevOps Engineer and full-stack developer.' }, 
     { name: 'keywords', content: 'Muhamad Aizat Nazran, Aizat Nazran, background, education, work experience, software engineer, full-stack developer, devops engineer, devops' }, 
     { property: 'og:title', content: 'Background - Aizat Nazran | DevOps Engineer' }, 
     { property: 'og:description', content: 'Learn about Aizat Nazran\'s education and his journey in the DevOps field.' }, 
@@ -20,7 +20,6 @@ useHead({
   ]
 })
 
-// Modal logic reused from Projects.vue
 const activeModal = ref(false);
 const activeOverlay = ref(false);
 const activeCertificate = ref({});
@@ -94,7 +93,7 @@ function showCertificate(certificateId) {
 function closeModal() {
   activeModal.value = false;
   activeOverlay.value = false;
-  activeCertificate.value = {}; // Reset the certificate
+  activeCertificate.value = {}; 
 }
 </script>
 
@@ -159,7 +158,7 @@ function closeModal() {
           <h4 class="h4 timeline-item-title">{{ certificate.title }}</h4>
           <span>{{ certificate.category.company }}</span>
           <p class="timeline-item-desc">{{ certificate.category.date }}</p>
-          <!-- Pass the correct certificate ID here -->
+          
           <button
             class="view-certificate-btn"
             @click="showCertificate(certificate.id)"
@@ -216,7 +215,6 @@ function closeModal() {
 </template>
 
 <style scoped>
-/* Styling reused for view certificate button based on download resume button */
 .view-certificate-btn {
   position: relative;
   display: inline-flex;
