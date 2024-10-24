@@ -340,7 +340,7 @@ main {
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: 420px;
 }
 
 .sidebar-info {
@@ -434,6 +434,7 @@ main {
   display: flex;
   align-items: center;
   gap: 16px;
+  
 }
 
 .contact-info {
@@ -1723,7 +1724,7 @@ textarea.contact::-webkit-resizer {
 
   .contacts-list {
     grid-template-columns: 1fr 1fr;
-    gap: 30px 15px;
+    gap: 28px 15px;
   }
 
   /**

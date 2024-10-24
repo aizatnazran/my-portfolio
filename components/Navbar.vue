@@ -11,7 +11,7 @@
 
       <li class="navbar-item">
         <NuxtLink to="/background" class="navbar-link">
-          Professional Background
+          Background
         </NuxtLink>
       </li>
 

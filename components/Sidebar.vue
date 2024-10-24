@@ -107,7 +107,7 @@ function toggleMenu() {
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease-in-out; 
-  padding: 3px 8px;
+  padding: 0.5px 5px;
   border-radius: 8px;
   background-color: var(--bg-gradient-jet); 
 }
@@ -126,7 +126,7 @@ function toggleMenu() {
 }
 
 .info-content .title {
-  margin-bottom: 3px; 
+  margin-bottom: 2px; 
 }
 
 .download-resume-btn {
