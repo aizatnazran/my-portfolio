@@ -24,18 +24,21 @@ useHead({
 const activeModal = ref(false);
 const activeOverlay = ref(false);
 const activeCertificate = ref({});
+
 const certificates = [
   {
     id: 1,
     title: 'AWS-COA - Cloud Operations on AWS',
     category: {
       date: 'September 2024',
-      title: 'Cloud Certification',
+      title: 'Cloud Operations Training',
       company: 'Trainocate',
+      url: 'https://trainocate.com/validate-cert/43c32e7e-f615-4897-931e-a40125f6e462/MTM3MDc0'
     },
     content: 'AWS Cloud Operations Certificate for cloud infrastructure management',
     image: '/images/Trainocate.jpeg',
     desc: 'View Certificate',
+    desc_in: 'Verify Certificate',
   },
   {
     id: 2,
@@ -44,10 +47,12 @@ const certificates = [
       date: 'July 2024',
       title: 'Kubernetes Certification',
       company: 'The Linux Foundation',
+      url: 'https://www.credly.com/badges/e8ad608f-e637-4b08-a813-48dba84eb626/',
     },
     content: 'Certified Kubernetes Administrator',
     image: '/images/CNCF.png',
     desc: 'View Certificate',
+    desc_in: 'Verify Certificate',
   },
   {
     id: 3,
@@ -56,12 +61,13 @@ const certificates = [
       date: 'June 2024',
       title: 'DevOps Certification',
       company: 'CCSD Council',
+      url: 'https://www.ccsdcouncil.org/certificate-verification',
     },
     content: 'Foundation-level knowledge on DevOps principles',
     image: '/images/CCSD.png',
     desc: 'View Certificate',
+    desc_in: 'Verify Certificate',
   },
-  
   {
     id: 4,
     title: 'AWS re/Start Graduate',
@@ -69,16 +75,17 @@ const certificates = [
       date: 'January 2024',
       title: 'Cloud Training',
       company: 'Amazon Web Services',
+      url: 'https://www.credly.com/badges/13d0c3b8-0ef6-4657-bf10-0879f21a50ba/linked_in_profile',
     },
     content: 'Graduate from the AWS re/Start program',
     image: '/images/WEPS.png',
     desc: 'View Certificate',
+    desc_in: 'Verify Certificate',
   }
 ];
 
-// The function should expect the ID of the certificate
+// Function to show certificate modal
 function showCertificate(certificateId) {
-  // Find the certificate using the provided ID
   activeCertificate.value = certificates.find(certificate => certificate.id === certificateId);
   activeModal.value = true;
   activeOverlay.value = true;
@@ -142,7 +149,7 @@ function closeModal() {
       <h2 class="h2 article-title">Certificates</h2>
     </header>
 
-      <section class="timeline">
+    <section class="timeline">
       <ol class="timeline-list">
         <li
           class="timeline-item"
@@ -164,8 +171,7 @@ function closeModal() {
       </ol>
     </section>
 
-    <!-- Modal for showing certificate -->
-      <!-- Modal for showing certificate details -->
+    <!-- Modal for certificate details -->
     <div class="modal-container" :class="{ active: activeModal }">
       <div
         v-show="activeModal"
@@ -191,7 +197,15 @@ function closeModal() {
           <small class="flex items-center justify-start gap-2 text-gray-500">
             <Icon icon="foundation:calendar" /><span>{{ activeCertificate.category?.date }}</span>
             | <Icon icon="dashicons:category" /><span>{{ activeCertificate.category?.title }}</span>
-            |  <Icon icon="dashicons:building" /><span>{{ activeCertificate.category?.company }}</span>
+            | <Icon icon="dashicons:building" /><span>{{ activeCertificate.category?.company }}</span>
+          
+            | <Icon icon="ri:search-eye-line" />
+        <a
+          :href="activeCertificate.category?.url"
+          target="_blank"
+          class="view-certificate-link"
+          >{{ activeCertificate.desc_in }}</a
+        >
           </small>
 
           <p class="text-justify">{{ activeCertificate.content }}</p>
@@ -208,7 +222,7 @@ function closeModal() {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 15px; /* Ensure rounded corners */
+  border-radius: 15px;
   font-size: 13px;
   color: var(--vegas-gold);
   background: var(--border-gradient-onyx);
@@ -216,7 +230,7 @@ function closeModal() {
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
-  overflow: hidden; /* Prevent pseudo-element overflow */
+  overflow: hidden;
 }
 
 .view-certificate-btn::before {
@@ -234,7 +248,7 @@ function closeModal() {
 
 .view-certificate-btn:hover::before,
 .view-certificate-btn:focus::before {
-  background: var(--bg-gradient-yellow-2); /* Change background on hover/focus */
+  background: var(--bg-gradient-yellow-2);
 }
 
 .view-certificate-btn ion-icon {
@@ -288,7 +302,7 @@ function closeModal() {
 }
 
 .testimonials-modal {
-  background: var(--eerie-black-2); /* Change from white to dark background */
+  background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
   margin: 15px 12px;
@@ -336,7 +350,7 @@ function closeModal() {
 }
 
 .modal-content p {
-  color: var(--light-gray); /* Adjust content color */
+  color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
