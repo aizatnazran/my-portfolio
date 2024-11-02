@@ -23,14 +23,14 @@ useHead({
     { hid: 'description', name: 'description', content: 'Contact Aizat Nazran for collaborations, tech opportunities, or inquiries about full-stack development and DevOps engineering services.' }, 
     { name: 'keywords', content: 'Aizat Nazran, Muhamad Aizat Nazran, contact, full-stack developer, devops engineer, collaborate, hire me, tech opportunities' }, 
     { property: 'og:title', content: 'Contact - Aizat Nazran | DevOps Engineer' }, 
-    { property: 'og:description', content: 'Get in touch with Aizat Nazran for collaborations or hiring opportunities in DevOps and full-stack development.' }, 
+    { property: 'og:description', content: 'Get in touch with Aizat Nazran for collaborations, hiring opportunities, or inquiries in DevOps and full-stack development.' }, 
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://aizat.dev/contact' }, 
     { property: 'og:image', content: 'https://aizat.dev/images/avatar2.jpg' }, 
     { property: 'og:image:alt', content: 'Aizat Nazran\'s profile picture' }, 
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Contact - Aizat Nazran | DevOps Engineer' },
-    { name: 'twitter:description', content: 'Reach out to Aizat Nazran for project collaboration or hiring in DevOps and software development.' },
+    { name: 'twitter:description', content: 'Reach out to Aizat Nazran for project collaborations, hiring opportunities, or inquiries in DevOps and software development.' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
     { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' }
   ]
