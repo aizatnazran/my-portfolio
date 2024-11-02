@@ -240,7 +240,7 @@ export default defineEventHandler(() => {
         en: 'View Project',
       }, 
       image: '/images/portfolio.png',
-      url: 'https://github.com/aizatnazran/simple-portfolio',
+      url: 'https://portfolio.aizat.dev',
     },
     {
       id: 11,
