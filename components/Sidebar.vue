@@ -14,7 +14,7 @@ function toggleMenu() {
       </figure>
 
       <div class="info-content">
-        <h1 class="name" title="Aizat Nazran">Aizat Nazran</h1>
+        <h1 class="name" title="Aizat Nazran">Aizat Nazra</h1>
 
         <a href="https://www.atlassian.com/devops/what-is-devops/devops-engineer" target="_blank" class="title-link">
     <p class="title text-center xl:block flex items-center justify-center gap-1">
