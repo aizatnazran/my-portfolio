@@ -19,7 +19,8 @@ useHead({
     { name: 'twitter:title', content: 'Projects - Aizat Nazran | DevOps Engineer' },
      { name: 'twitter:description', content: 'Discover Aizat Nazran\'s projects and development solutions, highlighting innovative work as a DevOps Engineer and full-stack developer.' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
-    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' }
+    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' },
+    { rel: 'canonical', href: 'https://aizat.dev/projects' }
   ]
 })
 

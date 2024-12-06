@@ -32,7 +32,8 @@ useHead({
     { name: 'twitter:title', content: 'Contact - Aizat Nazran | DevOps Engineer' },
     { name: 'twitter:description', content: 'Reach out to Aizat Nazran for project collaborations, hiring opportunities, or inquiries in DevOps and software development.' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
-    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' }
+    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' },
+    { rel: 'canonical', href: 'https://aizat.dev/contact' },
   ]
 })
   import { ref } from 'vue';

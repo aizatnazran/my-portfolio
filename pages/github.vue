@@ -14,7 +14,8 @@ useHead({
     { name: 'twitter:title', content: 'Github Repositories - Aizat Nazran | DevOps Engineer' },
     { name: 'twitter:description', content: 'Explore Aizat Nazran\'s contributions on GitHub and open-source projects.' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
-    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' }
+    { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' },
+    { rel: 'canonical', href: 'https://aizat.dev/github' }
   ]
 })
 </script>

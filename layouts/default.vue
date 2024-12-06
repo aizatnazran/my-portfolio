@@ -19,6 +19,7 @@ useHead({
     { name: 'twitter:description', content: 'Discover the projects and expertise of Aizat Nazran in full-stack development and DevOps.' },
     { name: 'twitter:image', content: 'https://aizat.dev/images/avatar2.jpg' },
     { name: 'twitter:image:alt', content: 'Aizat Nazran\'s profile picture' },
+    { rel: 'canonical', href: 'https://aizat.dev/' }
   ],
   link: [
     {
