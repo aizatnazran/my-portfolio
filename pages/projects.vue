@@ -215,23 +215,36 @@ function closeItem() {
   padding-top: 56.25%; 
   position: relative;
   overflow: hidden;
-  border-radius: 15px; 
+  border-radius: 15px;
+  background-color: transparent;
 }
 
 .project-img-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 
 .project-img-wrapper img {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: 100%;
   object-fit: cover; 
 }
+
+.project-item-icon-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+
 
 
 </style>
