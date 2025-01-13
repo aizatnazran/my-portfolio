@@ -72,7 +72,7 @@ export default defineEventHandler(() => {
         en: 'View Project',
       },
       image: '/images/wira-dashboard.png',
-      url: 'https://github.com/aizatnazran/wira-dashboard.git',
+      url: 'https://wira.aizat.dev',
     },
     {
       id: 4,
