@@ -5,25 +5,19 @@ export default defineEventHandler(() => {
     {
       id: 1,
       title: {
-        en: 'Front-End Development',
+        en: 'Full Stack Development',
       },
     },
     {
       id: 2,
       title: {
-        en: 'Back-End Development',
+        en: 'Messaging Services',
       },
     },
     {
       id: 3,
       title: {
-        en: 'Database and SQL',
-      },
-    },
-    {
-      id: 4,
-      title: {
-        en: 'Messaging Services',
+        en: 'Bots',
       },
     },
   ]

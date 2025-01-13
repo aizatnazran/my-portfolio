@@ -28,6 +28,20 @@ const activeCertificate = ref({});
 const certificates = [
   {
     id: 1,
+    title: 'AWS Certified Cloud Practitioner',
+    category: {
+      date: 'January 2025',
+      title: 'Cloud Certification',
+      company: 'Amazon Web Services (AWS)',
+      url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/47251a2939074c2b94778e5b04e9a236'
+    },
+    content: 'Earning the AWS Certified Cloud Practitioner certification provided me with a comprehensive understanding of the AWS Cloud and its global infrastructure. The certification validates my knowledge of essential cloud concepts, including AWS services, security, compliance, and pricing models. It also reinforced my ability to explain the value proposition of cloud computing and articulate fundamental architectural principles. This certification solidifies my foundational AWS knowledge, complementing my expertise in more advanced cloud and DevOps practices.',
+    image: '/images/AWS.png',
+    desc: 'View Certificate',
+    desc_in: 'Verify Certificate',
+  },
+  {
+    id: 2,
     title: 'AWS-COA - Cloud Operations on AWS',
     category: {
       date: 'September 2024',
@@ -41,7 +55,7 @@ const certificates = [
     desc_in: 'Verify Certificate',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Certified Kubernetes Administrator',
     category: {
       date: 'July 2024',
@@ -55,7 +69,7 @@ const certificates = [
     desc_in: 'Verify Certificate',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Certified DevOps Foundation',
     category: {
       date: 'June 2024',
@@ -69,7 +83,7 @@ const certificates = [
     desc_in: 'Verify Certificate',
   },
   {
-    id: 4,
+    id: 5,
     title: 'AWS re/Start Graduate',
     category: {
       date: 'January 2024',
