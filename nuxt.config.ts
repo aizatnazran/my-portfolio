@@ -24,12 +24,6 @@ export default defineNuxtConfig({
       }
     },
   },
-  vite: {
-    server: {
-      host: '0.0.0.0',
-      port: 3000, // Main Nuxt app port
-    },
-  },
   css: [
     // 'primevue/resources/themes/bootstrap4-dark-blue/theme.css',
     // 'primevue/resources/primevue.css',
