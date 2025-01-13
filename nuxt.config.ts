@@ -29,7 +29,6 @@ export default defineNuxtConfig({
       hmr: {
         protocol: 'wss', 
         host: 'aizat.dev', //aizat.dev
-        port: 24678, 
       },
     },
   },

@@ -98,18 +98,7 @@ const { data: about } = await useFetch('/api/about')
           <ion-icon name="close-outline" />
         </button>
 
-        <div class="flex gap-5 mb-5 justify-start items-center">
-          <div class="modal-avatar-box">
-            <img :src="testimonialItem.image" alt="Daniel lewis" width="80" />
-          </div>
-
-          <div class="modal-content">
-            <h4 class="h3 modal-title">
-              {{ testimonialItem.title }}
-            </h4>
-            <time datetime="2021-06-14">14 June, 2021</time>
-          </div>
-        </div>
+      
 
         <div class="flex gap-5 items-start">
           <img
