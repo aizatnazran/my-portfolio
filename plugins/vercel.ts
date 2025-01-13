@@ -1,7 +1,10 @@
 import { inject } from '@vercel/analytics';
 
 export default () => {
-  inject({
-    debug: false, 
-  });
+  
+  if (process.env.VERCEL) {
+    inject({
+      debug: false,
+    });
+  }
 };
