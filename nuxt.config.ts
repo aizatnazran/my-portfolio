@@ -27,9 +27,11 @@ export default defineNuxtConfig({
   vite: {
     server: {
       hmr: {
-        protocol: 'wss', 
-        host: 'aizat.dev', //aizat.dev
+        protocol: 'wss',
+        host: 'aizat.dev', 
       },
+      host: '0.0.0.0', 
+      port: 3000, 
     },
   },
   css: [
