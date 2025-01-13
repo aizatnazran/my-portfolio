@@ -24,6 +24,15 @@ export default defineNuxtConfig({
       }
     },
   },
+  vite: {
+    server: {
+      hmr: {
+        protocol: 'wss', 
+        host: 'aizat.dev', //aizat.dev
+        port: 24678, 
+      },
+    },
+  },
   css: [
     // 'primevue/resources/themes/bootstrap4-dark-blue/theme.css',
     // 'primevue/resources/primevue.css',
