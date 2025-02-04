@@ -143,8 +143,15 @@ function closeModal() {
     <section class="timeline">
       <ol class="timeline-list">
         <li class="timeline-item">
+          <h4 class="h4 timeline-item-title">RICRYM Sdn. Bhd.</h4>
+          <span>February 2025 — Present</span>
+          <p class="timeline-item-desc">Seri Kembangan</p>
+          <p class="timeline-text">Web Developer</p>
+        </li>
+
+        <li class="timeline-item">
           <h4 class="h4 timeline-item-title">A Serious Company Sdn. Bhd.</h4>
-          <span>December 2023 — Present</span>
+          <span>December 2023 — February 2025</span>
           <p class="timeline-item-desc">Bandar Sri Petaling</p>
           <p class="timeline-text">Full Stack Web Developer</p>
           <p class="timeline-text">DevOps Engineer</p>

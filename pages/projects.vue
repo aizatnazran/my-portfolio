@@ -200,8 +200,18 @@ function closeItem() {
                 >{{ activeItem.desc?.en }}</a
               >
             </small>
+            
 
             <p class="text-justify" v-html="activeItem.content?.en" />
+            <div v-if="activeItem.techStack" class="tech-stack">
+  <h4 class="tech-stack-title">Tech Stack:</h4>
+  <div class="tech-stack-list">
+    <div v-for="tech in activeItem.techStack" :key="tech.name" class="tech-stack-item">
+      <Icon :icon="tech.icon" class="tech-stack-icon" />
+      <span>{{ tech.name }}</span>
+    </div>
+  </div>
+</div>
           </div>
         </section>
       </div>
@@ -244,7 +254,56 @@ function closeItem() {
   z-index: 10;
 }
 
+.tech-stack {
+  margin-top: 15px;
+}
 
+.tech-stack-title {
+  font-size: 1.1rem; 
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: var(--white-2);
+}
 
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-stack-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 14px; 
+  font-weight: 500;
+  color: var(--white-2);
+  background: var(--border-gradient-onyx);
+  padding: 8px 14px; 
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+  overflow: hidden;
+  cursor: default; 
+  pointer-events: none;
+}
+
+.tech-stack-item::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.tech-stack-icon {
+  font-size: 1.5rem; 
+  margin-right: 6px;
+}
 
 </style>
