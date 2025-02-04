@@ -6,7 +6,7 @@ export default defineEventHandler(() => {
       id: 1,
       title: 'Share4Life',
       category: {
-        id: 2,
+        id: 1,
         date: { en: 'January 2025' },
         title: { en: 'Full Stack Development' },
         company: { en: 'Personal Project' },
