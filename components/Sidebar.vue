@@ -96,7 +96,6 @@ function toggleMenu() {
         </li>
       </ul>
 
-      <div class="separator" />
     </div>
   </aside>
 </template>

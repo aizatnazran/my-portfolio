@@ -306,4 +306,32 @@ function closeItem() {
   margin-right: 6px;
 }
 
+.modal-container .testimonials-modal {
+  scrollbar-width: thin; 
+  scrollbar-color: hsla(0, 0%, 50%, 0.2) var(--eerie-black-2); 
+}
+
+.modal-container .testimonials-modal::-webkit-scrollbar {
+  width: 20px; 
+  border: 1px solid hsla(0, 0%, 84%, 0.2); 
+  border-radius: 20px;
+}
+
+.modal-container .testimonials-modal::-webkit-scrollbar-track {
+  background: var(--eerie-black-2);
+  border-radius: 20px;
+}
+
+.modal-container .testimonials-modal::-webkit-scrollbar-thumb {
+  border: 5px solid var(--eerie-black-2);
+  background: hsla(0, 0%, 50%, 0.2);
+  border-radius: 20px;
+  box-shadow:
+    inset 1px 1px 0 hsla(0, 0%, 50%, 0.11),
+    inset -1px -1px 0 hsla(0, 0%, 50%, 0.11);
+}
+
+.modal-container .testimonials-modal::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 50%, 0.10); 
+}
 </style>

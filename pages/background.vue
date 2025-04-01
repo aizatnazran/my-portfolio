@@ -333,6 +333,8 @@ function closeModal() {
   opacity: 0;
   transition: var(--transition-1);
   z-index: 2;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modal-container.active .testimonials-modal {
