@@ -44,9 +44,11 @@ function toggleMenu() {
 
       <ul class="contacts-list">
         <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="logo-github" />
-          </div>
+          <a href="https://github.com/aizatnazran" target="_blank" class="icon-box-link">
+    <div class="icon-box">
+      <ion-icon name="logo-github" />
+    </div>
+  </a>
 
           <div class="contact-info">
             <p class="contact-title">Github</p>
@@ -55,9 +57,11 @@ function toggleMenu() {
         </li>
 
         <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="logo-linkedin" />
-          </div>
+          <a href="https://www.linkedin.com/in/aizat-nazran/" target="_blank" class="icon-box-link">
+    <div class="icon-box">
+      <ion-icon name="logo-linkedin" />
+    </div>
+  </a>
 
           <div class="contact-info">
             <p class="contact-title">Linkedin</p>
@@ -66,9 +70,11 @@ function toggleMenu() {
         </li>
 
         <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="mail-outline" />
-          </div>
+          <a href="mailto:aizatnazran@gmail.com" target="_blank" class="icon-box-link">
+    <div class="icon-box">
+      <ion-icon name="mail-outline" />
+    </div>
+  </a>
 
           <div class="contact-info">
             <p class="contact-title">Email</p>
@@ -211,4 +217,21 @@ function toggleMenu() {
   transform: none;
   color: inherit;
 }
+
+.icon-box-link .icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: var(--shadow-1); 
+}
+
+.icon-box-link:hover .icon-box {
+  background-color: #ffb400; 
+  transform: scale(1.1);
+}
+
 </style>
