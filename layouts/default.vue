@@ -41,14 +41,14 @@ useHead({
       crossorigin: '',
     },
   ],
-  script: [
+    script: [
     {
-      src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js',
+      src: 'https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js',
       body: false,
       type: 'module',
     },
     {
-      src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js',
+      src: 'https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js',
       body: false,
       nomodule: true,
     },
